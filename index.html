@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo HTML Template</title>
+    <style>
+      :root {
+        --bg: #f4f7fb;
+        --card: #ffffff;
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #eef4ff, #f9fafb);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 60px auto;
+        padding: 24px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 60px 50px;
+        background: linear-gradient(135deg, #eff6ff, #ffffff);
+      }
+
+      .hero-text {
+        flex: 1 1 420px;
+        padding-right: 20px;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        margin: 0 0 16px;
+      }
+
+      p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .cta-row {
+        margin-top: 24px;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 24px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.2s ease;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+      }
+
+      .btn-secondary {
+        background: #eef2ff;
+        color: var(--text);
+      }
+
+      .hero-visual {
+        flex: 1 1 320px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .demo-box {
+        width: min(100%, 420px);
+        min-height: 260px;
+        background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+        border: 1px solid #bfdbfe;
+        border-radius: 20px;
+        position: relative;
+        box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.6);
+      }
+
+      .demo-box::before,
+      .demo-box::after {
+        content: "";
+        position: absolute;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.7);
+      }
+
+      .demo-box::before {
+        width: 180px;
+        height: 120px;
+        left: 50px;
+        top: 50px;
+      }
+
+      .demo-box::after {
+        width: 120px;
+        height: 90px;
+        right: 50px;
+        bottom: 40px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 30px 40px 40px;
+      }
+
+      .feature {
+        background: #f8fafc;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px 20px;
+      }
+
+      .feature h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <section class="hero">
+          <div class="hero-text">
+            <h1>Build something amazing.</h1>
+            <p>
+              This is a simple demo HTML template with a clean layout, modern styling,
+              and a responsive design. Use it as a starting point for your next webpage.
+            </p>
+            <div class="cta-row">
+              <a href="#" class="btn btn-primary">Get Started</a>
+              <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="demo-box"></div>
+          </div>
+        </section>
+
+        <section class="features">
+          <article class="feature">
+            <h3>Responsive</h3>
+            <p>Looks good on mobile, tablet, and desktop screens.</p>
+          </article>
+          <article class="feature">
+            <h3>Modern</h3>
+            <p>Uses a clean visual style with easy-to-read typography.</p>
+          </article>
+          <article class="feature">
+            <h3>Flexible</h3>
+            <p>Simple structure you can customize for any project.</p>
+          </article>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
